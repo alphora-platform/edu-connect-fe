@@ -1,4 +1,9 @@
-@import "tailwindcss";
+@import "@fontsource/lexend";
+@import 'tailwindcss';
+
+:root {
+  --font-sans: "Lexend", sans-serif;
+}
 
 body {
   @apply m-0;
@@ -6,6 +11,37 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+@theme {
+  --color-primary: #2473eb;
+  --color-teal: #0d9488;
+  --color-background-light: #f6f7f8;
+  --color-background-dark: #111721;
 
+  --font-display: 'Lexend', sans-serif;
+}
+
+/* Custom scrollbar for better aesthetic */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }

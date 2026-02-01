@@ -1,67 +1,68 @@
 import { Link } from '@tanstack/react-router'
-
-import { useState } from 'react'
-import { Home, Menu, X } from 'lucide-react'
+import { Globe } from 'lucide-react'
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
     <>
-      <header className="p-4 flex items-center bg-gray-800 text-white shadow-lg">
-        <button
-          onClick={() => setIsOpen(true)}
-          className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
-          aria-label="Open menu"
-        >
-          <Menu size={24} />
-        </button>
-        <h1 className="ml-4 text-xl font-semibold">
-          <Link to="/">
-            <img
-              src="/tanstack-word-logo-white.svg"
-              alt="TanStack Logo"
-              className="h-10"
-            />
-          </Link>
-        </h1>
-      </header>
-
-      <aside
-        className={`fixed top-0 left-0 h-full w-80 bg-gray-900 text-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
-        <div className="flex items-center justify-between p-4 border-b border-gray-700">
-          <h2 className="text-xl font-bold">Navigation</h2>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
-            aria-label="Close menu"
-          >
-            <X size={24} />
-          </button>
-        </div>
-
-        <nav className="flex-1 p-4 overflow-y-auto">
+      <header className='sticky-header flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-4 h-20 w-full '>
+        <div className='flex items-center gap-3 text-primary'>
           <Link
-            to="/"
-            onClick={() => setIsOpen(false)}
-            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
-            activeProps={{
-              className:
-                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2',
-            }}
+            to='/'
+            className='size-10 flex items-center justify-center bg-primary/60 rounded-lg p-1'
           >
-            <Home size={20} />
-            <span className="font-medium">Home</span>
+            <img src='/public/favicon.ico' alt='' />
           </Link>
-
-          {/* Demo Links Start */}
-
-          {/* Demo Links End */}
-        </nav>
-      </aside>
+          <h2 className='text-[#111418] text-xl font-bold leading-tight tracking-[-0.015em]'>
+            EduConnect
+          </h2>
+        </div>
+        <div className='flex flex-1 justify-end gap-8 items-center'>
+          <div className='hidden lg:flex items-center gap-8'>
+            <a
+              className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
+              href='#'
+            >
+              Home
+            </a>
+            <a
+              className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
+              href='#'
+            >
+              Find Tutors
+            </a>
+            <a
+              className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
+              href='#'
+            >
+              How it Works
+            </a>
+            <a
+              className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
+              href='#'
+            >
+              Pricing
+            </a>
+            <a
+              className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
+              href='#'
+            >
+              Blog
+            </a>
+          </div>
+          <div className='flex gap-3 items-center'>
+            <div className='hidden sm:flex  cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-transparent hover:bg-gray-100 text-[#111418] gap-2 text-lg font-bold leading-normal tracking-[0.015em]  px-2.5 transition-colors'>
+              <Globe />
+              <div className='hidden xl:block'>EN</div>
+            </div>
+            <button className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 py-[18px] bg-transparent border border-[#dbdfe6] hover:bg-gray-50 text-[#111418] text-lg font-bold leading-normal tracking-[0.015em] transition-colors'>
+              <span className='truncate'>Login</span>
+            </button>
+            <button className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 py-5 bg-primary hover:bg-blue-700 text-white text-lg font-bold leading-normal tracking-[0.015em] transition-colors shadow-sm'>
+              <span className='truncate'>Sign Up</span>
+            </button>
+          </div>
+        </div>
+      </header>
     </>
   )
 }

@@ -12,10 +12,13 @@ body {
 }
 
 @theme {
-  --color-primary: #2473eb;
+  --color-primary: #1CB5E0;
   --color-teal: #0d9488;
   --color-background-light: #f6f7f8;
   --color-background-dark: #111721;
+  --color-text-main:#111618,
+  --color-text-mute:#617f89,
+  --color-card-dark: #18282f
 
   --font-display: 'Lexend', sans-serif;
 }

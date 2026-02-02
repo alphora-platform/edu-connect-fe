@@ -54,9 +54,9 @@ export default function Header() {
               <Globe />
               <div className='hidden xl:block'>EN</div>
             </div>
-            <button className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 py-[18px] bg-transparent border border-[#dbdfe6] hover:bg-gray-50 text-[#111418] text-lg font-bold leading-normal tracking-[0.015em] transition-colors'>
+            <Link to="/sign-in" className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 py-[18px] bg-transparent border border-[#dbdfe6] hover:bg-gray-50 text-[#111418] text-lg font-bold leading-normal tracking-[0.015em] transition-colors'>
               <span className='truncate'>Login</span>
-            </button>
+            </Link>
             <button className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 py-5 bg-primary hover:bg-blue-700 text-white text-lg font-bold leading-normal tracking-[0.015em] transition-colors shadow-sm'>
               <span className='truncate'>Sign Up</span>
             </button>

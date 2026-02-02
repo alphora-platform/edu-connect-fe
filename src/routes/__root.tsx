@@ -1,3 +1,5 @@
+import Footer from '@/components/layouts/Footer'
+import Header from '@/components/layouts/Header'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
@@ -8,8 +10,10 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <>
+    <div className='bg-background-light dark:bg-background-dark text-[#111418] font-display antialiased overflow-x-hidden'>
+      <Header />
       <Outlet />
+      <Footer />
 
       <TanStackDevtools
         config={{
@@ -22,8 +26,8 @@ function RootComponent() {
           },
         ]}
       />
-    </>
+    </div>
   )
 }
 
-// outlet ở đâu sẽ render component của route con ở đó, 
+// outlet ở đâu sẽ render component của route con ở đó,

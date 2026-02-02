@@ -13,6 +13,7 @@ import { Route as HomeIndexRouteImport } from './routes/_home/index'
 import { Route as AuthenticatedTutorIndexRouteImport } from './routes/_authenticated/tutor/index'
 import { Route as AuthenticatedStudentIndexRouteImport } from './routes/_authenticated/student/index'
 import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin/index'
+import { Route as AuthSignUpIndexRouteImport } from './routes/_auth/sign-up/index'
 import { Route as AuthSignInIndexRouteImport } from './routes/_auth/sign-in/index'
 
 const HomeIndexRoute = HomeIndexRouteImport.update({
@@ -36,6 +37,11 @@ const AuthenticatedAdminIndexRoute = AuthenticatedAdminIndexRouteImport.update({
   path: '/admin/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthSignUpIndexRoute = AuthSignUpIndexRouteImport.update({
+  id: '/_auth/sign-up/',
+  path: '/sign-up/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthSignInIndexRoute = AuthSignInIndexRouteImport.update({
   id: '/_auth/sign-in/',
   path: '/sign-in/',
@@ -45,6 +51,7 @@ const AuthSignInIndexRoute = AuthSignInIndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof HomeIndexRoute
   '/sign-in/': typeof AuthSignInIndexRoute
+  '/sign-up/': typeof AuthSignUpIndexRoute
   '/admin/': typeof AuthenticatedAdminIndexRoute
   '/student/': typeof AuthenticatedStudentIndexRoute
   '/tutor/': typeof AuthenticatedTutorIndexRoute
@@ -52,6 +59,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof HomeIndexRoute
   '/sign-in': typeof AuthSignInIndexRoute
+  '/sign-up': typeof AuthSignUpIndexRoute
   '/admin': typeof AuthenticatedAdminIndexRoute
   '/student': typeof AuthenticatedStudentIndexRoute
   '/tutor': typeof AuthenticatedTutorIndexRoute
@@ -60,19 +68,27 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_home/': typeof HomeIndexRoute
   '/_auth/sign-in/': typeof AuthSignInIndexRoute
+  '/_auth/sign-up/': typeof AuthSignUpIndexRoute
   '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
   '/_authenticated/student/': typeof AuthenticatedStudentIndexRoute
   '/_authenticated/tutor/': typeof AuthenticatedTutorIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sign-in/' | '/admin/' | '/student/' | '/tutor/'
+  fullPaths:
+    | '/'
+    | '/sign-in/'
+    | '/sign-up/'
+    | '/admin/'
+    | '/student/'
+    | '/tutor/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sign-in' | '/admin' | '/student' | '/tutor'
+  to: '/' | '/sign-in' | '/sign-up' | '/admin' | '/student' | '/tutor'
   id:
     | '__root__'
     | '/_home/'
     | '/_auth/sign-in/'
+    | '/_auth/sign-up/'
     | '/_authenticated/admin/'
     | '/_authenticated/student/'
     | '/_authenticated/tutor/'
@@ -81,6 +97,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   HomeIndexRoute: typeof HomeIndexRoute
   AuthSignInIndexRoute: typeof AuthSignInIndexRoute
+  AuthSignUpIndexRoute: typeof AuthSignUpIndexRoute
   AuthenticatedAdminIndexRoute: typeof AuthenticatedAdminIndexRoute
   AuthenticatedStudentIndexRoute: typeof AuthenticatedStudentIndexRoute
   AuthenticatedTutorIndexRoute: typeof AuthenticatedTutorIndexRoute
@@ -116,6 +133,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_auth/sign-up/': {
+      id: '/_auth/sign-up/'
+      path: '/sign-up'
+      fullPath: '/sign-up/'
+      preLoaderRoute: typeof AuthSignUpIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_auth/sign-in/': {
       id: '/_auth/sign-in/'
       path: '/sign-in'
@@ -129,6 +153,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   HomeIndexRoute: HomeIndexRoute,
   AuthSignInIndexRoute: AuthSignInIndexRoute,
+  AuthSignUpIndexRoute: AuthSignUpIndexRoute,
   AuthenticatedAdminIndexRoute: AuthenticatedAdminIndexRoute,
   AuthenticatedStudentIndexRoute: AuthenticatedStudentIndexRoute,
   AuthenticatedTutorIndexRoute: AuthenticatedTutorIndexRoute,

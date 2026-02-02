@@ -1,5 +1,3 @@
-import Footer from '@/components/layouts/Footer'
-import Header from '@/components/layouts/Header'
 import { createFileRoute } from '@tanstack/react-router'
 import FeatureSection from './_components/FeatureSection'
 import HeroSection from './_components/HeroSection'
@@ -14,15 +12,13 @@ export const Route = createFileRoute('/_home/')({
 
 function App() {
   return (
-    <div className='bg-background-light dark:bg-background-dark text-[#111418] font-display antialiased overflow-x-hidden'>
-      <Header />
+    <div>
       <HeroSection />
       <FeatureSection />
       <HowWorkSection />
       <SubjectsSection />
       <TutorsSection />
       <TestimonialsSection />
-      <Footer />
     </div>
   )
 }

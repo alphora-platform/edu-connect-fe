@@ -12,7 +12,9 @@ function RootComponent() {
   return (
     <div className='bg-background-light dark:bg-background-dark text-[#111418] font-display antialiased overflow-x-hidden'>
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
 
       <TanStackDevtools

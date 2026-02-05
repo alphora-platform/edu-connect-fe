@@ -2,7 +2,7 @@ import { CalendarDays, GraduationCap, Search, UserRoundSearch } from 'lucide-rea
 
 export default function HowWorkSection() {
   return (
-    <div className='bg-background-light py-16 px-4 md:px-10 lg:px-40'>
+    <div className='bg-background-light py-16 px-4 md:px-10 lg:px-40 scroll-mt-24' id='how-it-work'>
       <div className='max-w-[1100px] mx-auto flex flex-col gap-12'>
         <div className='text-center'>
           <h2 className='text-[#111418] text-3xl md:text-4xl font-bold'>How It Works</h2>

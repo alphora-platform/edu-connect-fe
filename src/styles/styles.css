@@ -4,6 +4,9 @@
 :root {
   --font-sans: "Lexend", sans-serif;
 }
+html {
+scroll-behavior: smooth;
+}
 
 body {
   @apply m-0;

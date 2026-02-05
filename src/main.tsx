@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom/client'
 import { routeTree } from './routeTree.gen'
 
 import reportWebVitals from './reportWebVitals.ts'
-import './styles.css'
+import './styles/styles.css'
 
 // Create a new router instance
 const router = createRouter({

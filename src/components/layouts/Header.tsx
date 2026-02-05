@@ -12,39 +12,39 @@ export default function Header() {
           >
             <img src='/public/favicon.ico' alt='' />
           </Link>
-          <h2 className='text-[#111418] text-xl font-bold leading-tight tracking-[-0.015em]'>
+          <Link to="/" className='text-[#111418] text-xl font-bold leading-tight tracking-[-0.015em]'>
             EduConnect
-          </h2>
+          </Link>
         </div>
         <div className='flex flex-1 justify-end gap-8 items-center'>
           <div className='hidden lg:flex items-center gap-8'>
-            <a
+            <Link to="/"
               className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
-              href='#'
+
             >
               Home
-            </a>
+            </Link>
             <a
               className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
-              href='#'
+
             >
               Find Tutors
             </a>
             <a
               className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
-              href='#'
+              href='#how-it-work'
             >
               How it Works
             </a>
             <a
               className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
-              href='#'
+
             >
               Pricing
             </a>
             <a
               className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
-              href='#'
+
             >
               Blog
             </a>
@@ -57,9 +57,9 @@ export default function Header() {
             <Link to="/sign-in" className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 py-[18px] bg-transparent border border-[#dbdfe6] hover:bg-gray-50 text-[#111418] text-lg font-bold leading-normal tracking-[0.015em] transition-colors'>
               <span className='truncate'>Login</span>
             </Link>
-            <button className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 py-5 bg-primary hover:bg-blue-700 text-white text-lg font-bold leading-normal tracking-[0.015em] transition-colors shadow-sm'>
+            <Link to="/sign-up" className='flex min-w-21 max-w-120 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 py-5 bg-primary hover:bg-blue-700 text-white text-lg font-bold leading-normal tracking-[0.015em] transition-colors shadow-sm'>
               <span className='truncate'>Sign Up</span>
-            </button>
+            </Link>
           </div>
         </div>
       </header>

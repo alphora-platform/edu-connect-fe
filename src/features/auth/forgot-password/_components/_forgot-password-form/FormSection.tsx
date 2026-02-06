@@ -1,12 +1,12 @@
-import { useForgotPasswordState } from '@/lib/stores/forgotPassword.store'
+import { useForgotPasswordState } from '@/features/auth/forgot-password/forgotPassword.store'
 import { Mail } from 'lucide-react'
 import { useState } from 'react'
 
 export default function FormSection() {
   const sendEmailResetPassword = useForgotPasswordState((state) => state.sendEmailResetPassword)
-  const [email,setEmail] = useState('')
+  const [email, setEmail] = useState('')
 
-  function handleSubmit(e:React.SubmitEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault()
     sendEmailResetPassword(email)
   }
@@ -33,7 +33,6 @@ export default function FormSection() {
       <button
         className='w-full h-12 bg-primary hover:bg-primary-hover text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 focus:ring-2 focus:ring-primary focus:ring-offset-1 focus:ring-offset-white cursor-pointer'
         type='submit'
-
       >
         <span>Send Reset Link</span>
       </button>

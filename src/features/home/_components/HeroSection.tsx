@@ -2,7 +2,7 @@ import { MapPin, Search } from 'lucide-react'
 
 export default function HeroSection() {
   return (
-    <div className='relative w-full bg-linear-to-br from-primary] to-[#0D9488] py-20 px-4 lg:px-40 flex flex-col items-center justify-center gap-12 overflow-hidden'>
+    <div className='relative w-full bg-linear-to-br from-primary to-[#0D9488] py-20 px-4 lg:px-40 flex flex-col items-center justify-center gap-12 overflow-hidden'>
       {/* <!-- Abstract Background shapes --> */}
       <div className='absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20'>
         <div className='absolute -top-[10%] -left-[10%] w-[50%] h-[50%] rounded-full bg-white blur-3xl'></div>
@@ -34,7 +34,7 @@ export default function HeroSection() {
               type='text'
             />
           </div>
-          <button className='bg-primary hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg transition-colors flex items-center justify-center gap-2'>
+          <button className='bg-primary hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer'>
             <span>Search</span>
           </button>
         </div>

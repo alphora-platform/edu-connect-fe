@@ -12,5 +12,5 @@ export const useForgotPasswordState = create<State & Action>((set) => ({
   isSendingResetEmail: false,
   email: '',
 
-  sendEmailResetPassword: (email: string) => set({ email, isSendingResetEmail: true }),
+  sendEmailResetPassword: (email) => set({ email, isSendingResetEmail: true }),
 }))

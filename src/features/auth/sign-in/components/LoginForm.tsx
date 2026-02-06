@@ -1,5 +1,6 @@
-import { Mail, LockKeyhole } from 'lucide-react'
+import {  LockKeyhole, Mail } from 'lucide-react'
 import GoogleLogo from '../../../../../public/google-icon.webp'
+import { Link } from "@tanstack/react-router"
 
 export default function LoginForm() {
   return (
@@ -14,7 +15,7 @@ export default function LoginForm() {
             type='email'
           />
           <div className='text-[#9aa2ac] flex items-center justify-center px-2'>
-            <Mail   />
+            <Mail />
           </div>
         </div>
       </div>
@@ -43,9 +44,13 @@ export default function LoginForm() {
             Remember me
           </p>
         </label>
-        <a className='text-primary text-base font-medium leading-normal hover:underline' href='#'>
+        <Link
+          to='/forgot-password'
+          className='text-primary text-base font-medium leading-normal hover:underline'
+        
+        >
           Forgot password?
-        </a>
+        </Link>
       </div>
       {/* <!-- Submit Button --> */}
       <button className='flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-all shadow-md mt-2'>
@@ -62,7 +67,7 @@ export default function LoginForm() {
         className='flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-lg h-12 px-4 bg-white border border-[#dbe0e6] text-[#111418] text-base font-medium leading-normal tracking-[0.015em] hover:bg-gray-50 transition-colors'
         type='button'
       >
-        <img src={GoogleLogo} alt="google-icon" className='size-6' />
+        <img src={GoogleLogo} alt='google-icon' className='size-6' />
         <span>Sign in with Google</span>
       </button>
     </form>

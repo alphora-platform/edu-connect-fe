@@ -21,7 +21,7 @@ export default function TutorsSection() {
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
           {/* <!-- Tutor Card 1 --> */}
-          <div className='bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow flex flex-col'>
+          <div className='bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow flex flex-col '>
             <div
               className='h-24 bg-linear-to-r from-blue-500 to-teal-400 relative'
               data-alt='Blue gradient header background'
@@ -58,14 +58,14 @@ export default function TutorsSection() {
                 <span className='font-bold text-lg text-[#111418]'>
                   $45<span className='text-sm text-gray-400 font-normal'>/hr</span>
                 </span>
-                <button className='text-primary text-sm font-bold hover:bg-blue-50 px-3 py-1.5 rounded transition-colors'>
+                <button className='cursor-pointer text-primary text-sm font-bold hover:bg-blue-50 px-3 py-1.5 rounded transition-colors'>
                   View Profile
                 </button>
               </div>
             </div>
           </div>
           {/* <!-- Tutor Card 2 --> */}
-          <div className='bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow flex flex-col'>
+          <div className='bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow flex flex-col '>
             <div
               className='h-24 bg-linear-to-r from-purple-500 to-pink-400 relative'
               data-alt='Purple gradient header background'
@@ -102,14 +102,14 @@ export default function TutorsSection() {
                 <span className='font-bold text-lg text-[#111418]'>
                   $35<span className='text-sm text-gray-400 font-normal'>/hr</span>
                 </span>
-                <button className='text-primary text-sm font-bold hover:bg-blue-50 px-3 py-1.5 rounded transition-colors'>
+                <button className='cursor-pointer text-primary text-sm font-bold hover:bg-blue-50 px-3 py-1.5 rounded transition-colors'>
                   View Profile
                 </button>
               </div>
             </div>
           </div>
           {/* <!-- Tutor Card 3 --> */}
-          <div className='bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow flex flex-col'>
+          <div className='bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow flex flex-col '>
             <div
               className='h-24 bg-linear-to-r from-teal-500 to-green-400 relative'
               data-alt='Teal gradient header background'
@@ -146,14 +146,14 @@ export default function TutorsSection() {
                 <span className='font-bold text-lg text-[#111418]'>
                   $50<span className='text-sm text-gray-400 font-normal'>/hr</span>
                 </span>
-                <button className='text-primary text-sm font-bold hover:bg-blue-50 px-3 py-1.5 rounded transition-colors'>
+                <button className='cursor-pointer text-primary text-sm font-bold hover:bg-blue-50 px-3 py-1.5 rounded transition-colors'>
                   View Profile
                 </button>
               </div>
             </div>
           </div>
           {/* <!-- Tutor Card 4 --> */}
-          <div className='bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow flex flex-col'>
+          <div className='bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow flex flex-col '>
             <div
               className='h-24 bg-linear-to-r from-orange-400 to-red-400 relative'
               data-alt='Orange gradient header background'
@@ -190,7 +190,7 @@ export default function TutorsSection() {
                 <span className='font-bold text-lg text-[#111418]'>
                   $60<span className='text-sm text-gray-400 font-normal'>/hr</span>
                 </span>
-                <button className='text-primary text-sm font-bold hover:bg-blue-50 px-3 py-1.5 rounded transition-colors'>
+                <button className='cursor-pointer text-primary text-sm font-bold hover:bg-blue-50 px-3 py-1.5 rounded transition-colors'>
                   View Profile
                 </button>
               </div>

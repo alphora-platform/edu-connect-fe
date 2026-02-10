@@ -1,10 +1,22 @@
-import {  LockKeyhole, Mail } from 'lucide-react'
+import { Link } from '@tanstack/react-router'
+import { LockKeyhole, Mail } from 'lucide-react'
+import { useForm } from 'react-hook-form'
+import * as z from 'zod'
 import GoogleLogo from '../../../../../public/google-icon.webp'
-import { Link } from "@tanstack/react-router"
+import { signInSchema as schema } from '../../schema/sign-in.schema'
+
+type SignInForm = z.infer<typeof schema>
 
 export default function LoginForm() {
+  const { register, handleSubmit } = useForm<SignInForm>()
+
+  const onSubmit = (data: SignInForm) => {
+    console.log('sign-in :>> ', data)
+    return data
+  }
+
   return (
-    <form action='#' className='flex flex-col gap-5' method='POST'>
+    <form action='#' className='flex flex-col gap-5' onSubmit={handleSubmit(onSubmit)}>
       {/* <!-- Email Field --> */}
       <div className='flex flex-col gap-2'>
         <label className='text-[#111418] text-base font-medium leading-normal'>Email</label>
@@ -13,6 +25,7 @@ export default function LoginForm() {
             className='flex w-full min-w-0 flex-1 resize-none border-none bg-transparent text-[#111418] focus:outline-0 focus:ring-0 placeholder:text-[#9aa2ac] px-4 text-base font-normal leading-normal'
             placeholder='Enter your email'
             type='email'
+            {...register('email')}
           />
           <div className='text-[#9aa2ac] flex items-center justify-center px-2'>
             <Mail />
@@ -27,6 +40,7 @@ export default function LoginForm() {
             className='flex w-full min-w-0 flex-1 resize-none border-none bg-transparent text-[#111418] focus:outline-0 focus:ring-0 placeholder:text-[#9aa2ac] px-4 text-base font-normal leading-normal'
             placeholder='Enter your password'
             type='password'
+            {...register('password')}
           />
           <div className='text-[#9aa2ac] flex items-center justify-center px-2 cursor-pointer hover:text-[#111418]'>
             <LockKeyhole />
@@ -47,7 +61,6 @@ export default function LoginForm() {
         <Link
           to='/forgot-password'
           className='text-primary text-base font-medium leading-normal hover:underline'
-        
         >
           Forgot password?
         </Link>

@@ -51,3 +51,43 @@ body {
     0 4px 6px -1px rgba(0, 0, 0, 0.05),
     0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
+
+.role-segmented {
+  background: #f0f3f4; /* nền xám */
+  padding: 8px 8px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.role-segmented .ant-segmented-item {
+  border-radius: 8px;
+  flex: 1;
+  padding:8px 0;
+  font-size: 18px;
+}
+
+.role-segmented .ant-segmented-item-selected {
+  background: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  color: #1CB5E0;
+  font-weight: 500;
+}
+
+/* Trạng thái bình thường */
+.subject-select  {
+  border-radius: 8px;
+  border: 0.5px solid rgb(13, 148, 136,0.2);
+  min-height: 50px;
+  padding: 8px 4px;
+  display: flex;
+
+}
+
+/* Khi có tag bên trong vẫn giữ style */
+.subject-select.ant-select-multiple .ant-select-selection-item {
+  background: #ccfbf1;
+  border-radius: 6px;
+  padding: 4px;
+  color: #0d9488
+}
+

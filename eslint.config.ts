@@ -22,7 +22,7 @@ export default defineConfig([
       'no-unused-vars': 'warn',
 
       // Warn on console statements
-      'no-console': 'warn',
+      'no-console': 'off',
 
       // Warn on any use of the `any` type
       '@typescript-eslint/no-explicit-any': 'warn',

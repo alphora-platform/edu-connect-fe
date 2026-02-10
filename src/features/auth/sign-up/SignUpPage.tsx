@@ -1,8 +1,8 @@
-import Devider from './_components/Divider'
-import RegisterFooter from './_components/RegisterFooter'
-import RegisterForm from './_components/RegisterForm'
-import RegisterHeader from './_components/RegisterHeader'
-import RegisterWithSocial from './_components/RegisterWithSocial'
+import Devider from './components/Divider'
+import RegisterFooter from './components/RegisterFooter'
+import RegisterForm from './components/RegisterForm'
+import RegisterHeader from './components/RegisterHeader'
+import RegisterWithSocial from './components/RegisterWithSocial'
 
 export default function SignUpPage() {
   return (

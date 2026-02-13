@@ -24,12 +24,12 @@ export default function Header() {
             >
               Home
             </Link>
-            <a
+            <Link to="/find-tutors"
               className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
 
             >
               Find Tutors
-            </a>
+            </Link>
             <a
               className='text-[#111418] hover:text-primary transition-colors text-lg font-medium leading-normal'
               href='#how-it-work'

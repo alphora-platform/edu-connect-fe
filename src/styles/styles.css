@@ -18,10 +18,12 @@ body {
   --color-primary: #1CB5E0;
   --color-teal: #0d9488;
   --color-background-light: #f6f7f8;
-  --color-background-dark: #111721;
-  --color-text-main:#111618,
-  --color-text-mute:#617f89,
-  --color-card-dark: #18282f
+  --color-background-dark: #101622;
+  --color-text-main:#111618;
+  --color-text-mute:#617f89;
+  --color-card-dark: #18282f;
+  --color-surface-dark:#1e2532;
+  --color-sidebar-bg: #F8FAFC
 
   --font-display: 'Lexend', sans-serif;
 }
